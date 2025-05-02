@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Inter_Var";
+  src: url("../public/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html{
+  font-size: 10px;
+}
+
+:root {
+  --font-family: "Inter_Var", sans-serif;
+--c-green: rgb(4, 214, 158);
+--c-greenlight: rgb(143, 216, 197);
+--c-black400: #858585;
+--c-black800: #2C2B2B;
+--c-black950: #0000;
+--c-white200: #F5F2F2;
+}
