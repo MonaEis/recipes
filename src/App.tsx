@@ -4,6 +4,7 @@ import RezeptePage from "./pages/RezeptePage";
 import UeberUnsPage from "./pages/UeberUnsPage";
 import RezeptDetailPage from "./pages/RezeptDetailPage";
 import RootLayout from "./components/RootLayout";
+import RecipesDetailsLayout from "./components/RecipesDetailsLayout";
 
 const router = createBrowserRouter([
     {
@@ -12,9 +13,14 @@ const router = createBrowserRouter([
             { path: "/", Component: HomePage },
             { path: "/rezepte", Component: RezeptePage },
             { path: "/ueberuns", Component: UeberUnsPage },
-            { path: "/rezepte/:id", Component: RezeptDetailPage },
         ],
     },
+    {
+      Component: RecipesDetailsLayout,
+        children: [
+         { path: "/rezepte/:id", Component: RezeptDetailPage },
+      ],
+  },
 ]);
 
 function App() {

@@ -1,0 +1,29 @@
+footer {
+    background-color: var(--c-green);
+    padding: 8.5rem 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer .logo img{
+    height: 5.5rem;
+}
+
+footer .logo h2{
+    font-size: var(--fs-45);
+    color: var(--c-black800);
+    font-weight: 500;
+}
+
+footer .social_media{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

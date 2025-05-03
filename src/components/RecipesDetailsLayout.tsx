@@ -1,14 +1,12 @@
 import { Outlet } from "react-router";
 import Navi from "./Navi";
 import Footer from "./Footer";
-import Header from "./Header";
 
 
-const RootLayout = () => {
+const RecipesDetailsLayout = () => {
   return (
     <div>
         <Navi/>
-        <Header/>
       <main>
         <Outlet/>
       </main>
@@ -17,4 +15,4 @@ const RootLayout = () => {
   )
 }
 
-export default RootLayout
+export default RecipesDetailsLayout

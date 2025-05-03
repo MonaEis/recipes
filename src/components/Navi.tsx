@@ -1,16 +1,16 @@
-import { Link, NavLink } from "react-router"
+import { NavLink } from "react-router"
 import "../styles/navi.css"
 
 const Navi = () => {
   return (
     <nav>
         <div className="color_stripe"></div>
-        <div>
-            <div>
+        <div className="navi">
+            <div className="logo">
                 <img src="src/assets/img/loeffelgruen_logo.svg" alt="Logo" />
                 <h2>Löffelgrün</h2>
             </div>
-            <div>
+            <div className="links">
                 <NavLink to={"/"}>Home</NavLink>
                 <NavLink to={"/rezepte"}>Rezepte</NavLink>
                 <NavLink to={"/ueberuns"}>Über uns</NavLink>

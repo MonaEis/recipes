@@ -3,4 +3,38 @@ nav .color_stripe {
     height: 2rem;
     background-color: var(--c-green);
 }
- 
+
+nav .navi{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 8vw 3rem 15vw;
+    align-items: center;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+nav .logo img{
+    height: 3rem;
+}
+
+nav .logo h2{
+    font-size: var(--fs-26);
+    color: var(--c-green);
+    font-weight: 500;
+}
+
+nav .links{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+nav a{
+    font-size: var(--fs-26);
+    font-weight: 600;
+    color: var(--c-black800);
+}
