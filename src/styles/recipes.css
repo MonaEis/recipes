@@ -1,0 +1,89 @@
+.recipes{
+    padding: 8rem 8vw;
+}
+
+.recipes h2{
+    text-align: center;
+    font-size: var(--fs-40);
+    color: var(--c-black800);
+    margin-bottom: 4rem;
+}
+
+.recipes .favourites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin-bottom: 10rem;
+}
+
+.recipes .favourites .tile{
+    width: 100%;
+    border-radius: 3.3rem;
+    background-color: var(--c-white200);
+}
+
+.recipes .favourites .tile img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3.3rem 3.3rem 0 0;
+}
+
+
+.recipes .tile .tile_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 300px;
+    padding: 3rem 4rem 4rem 4rem;
+}
+
+.recipes  .tile h4{
+    font-size: var(--fs-30);
+    color: var(--c-black800);
+    margin-bottom: 1rem;
+}
+
+.recipes  .tile p{
+    font-size: var(--fs-20);
+    color: var(--c-black800);
+}
+
+.recipes .latest{
+    padding: 0 4vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+
+.recipes .latest .tile{
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    height: 32rem;
+    border-radius: 3.3rem;
+    background-color: var(--c-white200);
+}
+
+.recipes .latest .tile img{
+    height: 32rem;
+    width: 30vw;
+    object-fit: cover;
+    border-radius: 3.3rem 0 0 3.3rem;
+}
+
+.recipes .latest .tile .tile_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 300px;
+    padding: 3rem 4rem 4rem 4rem;
+}
+
+.recipes .info_text{
+    color: var(--c-green);
+    text-align: center;
+    font-size: var(--fs-30);
+}

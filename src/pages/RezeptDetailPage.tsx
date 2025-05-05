@@ -1,3 +1,4 @@
+
 const RezeptDetailPage = () => {
   return (
     <div>
