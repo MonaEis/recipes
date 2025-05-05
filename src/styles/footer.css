@@ -27,3 +27,35 @@ footer .social_media{
     flex-direction: column;
     gap: 2rem;
 }
+
+footer .social_media p{
+    font-size: var(--fs-26);
+    font-weight: 500;
+}
+
+footer .social_media .all_icons{
+    display: flex;
+    gap: 2rem;
+}
+
+footer .social_media .icon {
+    background-color: var(--c-greenlight);
+    height: 3.3rem;
+    width: 3.3rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+footer .social_media .icon img{
+    width: 2rem;
+}
+
+footer .social_media .icon:hover{
+    rotate: 45deg;
+}
+
+footer .social_media .icon img:hover{
+    rotate: -45deg;
+}

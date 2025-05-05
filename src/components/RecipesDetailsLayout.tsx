@@ -1,6 +1,7 @@
-import { Outlet } from "react-router";
+// import { Outlet } from "react-router";
 import Navi from "./Navi";
 import Footer from "./Footer";
+import RezeptDetailPage from "../pages/RezeptDetailPage";
 
 
 const RecipesDetailsLayout = () => {
@@ -8,7 +9,7 @@ const RecipesDetailsLayout = () => {
     <div>
         <Navi/>
       <main>
-        <Outlet/>
+        <RezeptDetailPage/>
       </main>
       <Footer/>
     </div>

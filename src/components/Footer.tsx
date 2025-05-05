@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
       <div className="social_media">
         <p>Social Media</p>
-        <div>
+        <div className="all_icons">
           <div className="icon">
             <a href="https://github.com/MonaEis" target="_blank" ><img src="src/assets/img/YT.png" alt="YouTube" /></a>
           </div>
