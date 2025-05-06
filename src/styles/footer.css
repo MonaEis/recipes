@@ -53,9 +53,6 @@ footer .social_media .icon img{
 }
 
 footer .social_media .icon:hover{
-    rotate: 45deg;
-}
-
-footer .social_media .icon img:hover{
-    rotate: -45deg;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0,255,255,0.5);
 }

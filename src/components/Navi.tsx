@@ -6,7 +6,7 @@ const Navi = () => {
         <nav>
             <div className="color_stripe"></div>
             <div className="navi">
-                <NavLink to="/">
+                <a href="/">
                     <div className="logo">
                         <img
                             src="src/assets/img/loeffelgruen_logo.svg"
@@ -14,14 +14,14 @@ const Navi = () => {
                         />
                         <h2>Löffelgrün</h2>
                     </div>
-                </NavLink>
+                </a>
                 <div className="links">
-                    <NavLink to={"/"}>Home</NavLink>
-                    <NavLink to={"/rezepte"}>Rezepte</NavLink>
-                    <NavLink to={"/ueberuns"}>Über uns</NavLink>
-                    <NavLink to={"/neuesrezept"}>Neues Rezept</NavLink>
+                    <NavLink className="active_link" to={"/"}>Home</NavLink>
+                    <NavLink className="active_link" to={"/rezepte"}>Rezepte</NavLink>
+                    <NavLink className="active_link" to={"/ueberuns"}>Über uns</NavLink>
+                    <NavLink className="active_link" to={"/neuesrezept"}>Neues Rezept</NavLink>
                 </div>
-                <NavLink to={"/login"}>Login</NavLink>
+                <NavLink className="active_link" to={"/login"}>Login</NavLink>
             </div>
         </nav>
     );

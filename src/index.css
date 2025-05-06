@@ -47,4 +47,13 @@ a{
     border-radius: 3.2rem;
     cursor: pointer;
     border-style: none;
+    transition: 0.5s;
+}
+
+.green_btn:hover{
+  transform: scale(1.1) rotate(3deg);
+  background-color: var(--c-white100);
+  color: var(--c-green);
+  
+  box-shadow: 0 0 10px var(--c-greenlight);
 }
