@@ -4,23 +4,26 @@ import RezeptePage from "./pages/RezeptePage";
 import UeberUnsPage from "./pages/UeberUnsPage";
 import RezeptDetailPage from "./pages/RezeptDetailPage";
 import RootLayout from "./components/RootLayout";
-import RecipesDetailsLayout from "./components/RecipesDetailsLayout";
+import StandardHeaderLayout from "./components/StandardHeaderLayout";
+import NeuesRezeptPage from "./pages/NeuesRezeptPage";
 
 const router = createBrowserRouter([
-    {
-        Component: RootLayout,
-        children: [
-            { path: "/", Component: HomePage },
-            { path: "/rezepte", Component: RezeptePage },
-            { path: "/ueberuns", Component: UeberUnsPage },
-        ],
-    },
-    {
-      Component: RecipesDetailsLayout,
-        children: [
-         { path: "/rezepte/:id", Component: RezeptDetailPage },
-      ],
-  },
+    { Component: RootLayout,
+        children: [{
+            
+                Component: StandardHeaderLayout,
+                children: [
+                    { path: "/", Component: HomePage },
+                    { path: "/rezepte", Component: RezeptePage },
+                    { path: "/ueberuns", Component: UeberUnsPage },
+                    { path: "/neuesrezept", Component: NeuesRezeptPage },
+                ],
+            },
+            { path: "/rezepte/:id", Component: RezeptDetailPage }
+        ]
+    }
+    
+    
 ]);
 
 function App() {

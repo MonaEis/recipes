@@ -25,9 +25,14 @@
     max-width: 70%;
 }
 
-.recipe_detail .ingridients, .recipe_detail .instructions, .recipe_detail .additional_info {
+.recipe_detail .intro,.recipe_detail .ingridients, .recipe_detail .instructions, .recipe_detail .additional_info, .recipe_detail .buttons {
    padding: 3rem 8vw;
    color: var(--c-black800);
+}
+
+.recipe_detail .intro{
+    display: flex;
+    justify-content: space-between;
 }
 
 .recipe_detail h2 {

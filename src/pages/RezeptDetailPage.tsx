@@ -1,6 +1,6 @@
 import "../styles/rezept_detail_page.css";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 
 type RecipeDetail = {
@@ -22,16 +22,23 @@ type RecipeDetail = {
         recipe_id?: string;
         unit?: string | null;
     };
+    categories: {
+          created_at: string
+          id: string
+          name: string
+        }
 };
+
 
 const RezeptDetailPage = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [recipe, setRecipe] = useState<RecipeDetail[]>([]);
 
     useEffect(() => {
         supabase
             .from("recipes")
-            .select("*, ingredients(*)")
+            .select("*, ingredients(*), categories(*)")
             .eq("id", id)
             .then((result) => {
                 console.log(result.data);
@@ -40,6 +47,18 @@ const RezeptDetailPage = () => {
                 }
             });
     }, [id]);
+    // console.log(recipe[0])
+    // console.log(recipe[0].ingredients)
+
+const handleChange = () =>{
+    navigate("/neuesrezept")
+}
+
+    const handleDelete = () => {
+        supabase.from("recipes").delete().eq("id", id).then(()=>{
+            navigate("/rezepte")
+        });
+    };
 
     return (
         <article className="recipe_detail">
@@ -53,6 +72,10 @@ const RezeptDetailPage = () => {
                             />
                             <h1 className="overlay-text">{recipe.name}</h1>
                         </div>
+                    </section>
+                    <section className="intro">
+                        <h2>ein schönes Rezept aus der Kategorie: {recipe.categories.name}</h2>
+                        <h2>{recipe.rating} Sterne Bewertung</h2>
                     </section>
                     <section className="ingridients">
                         <h2>Zutaten</h2>
@@ -72,6 +95,12 @@ const RezeptDetailPage = () => {
                     <section className="additional_info">
                         <h2>Zusätzliche Informationen</h2>
                         <p>{recipe.ingredients.additional_info}</p>
+                        <p>{recipe.servings} Portionen</p>
+                    </section>
+                    <section className="buttons">
+                    <button onClick={handleChange} className="green_btn">Ändern</button>
+                    <button onClick={handleDelete} className="green_btn">Löschen</button>
+                        
                     </section>
                 </>
             ))}
