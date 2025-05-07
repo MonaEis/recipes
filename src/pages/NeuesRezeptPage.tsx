@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
+import "../styles/neues_rezept_page.css";
 
 const NeuesRezeptPage = () => {
     const [name, setName] = useState("");
@@ -10,7 +11,6 @@ const NeuesRezeptPage = () => {
     const [category, setCategory] = useState("");
     const [isPending, setIsPending] = useState(false);
 
-    const { id } = useParams();
     const navigate = useNavigate();
 
     const handleSubmit = (e: React.MouseEvent) => {
@@ -22,23 +22,51 @@ const NeuesRezeptPage = () => {
             instructions,
             category_id: category,
         });
+
+        if (
+            name.trim().length === 0 ||
+            description.trim().length === 0 ||
+            servings.trim().length === 0 ||
+            instructions.trim().length === 0 ||
+            !category
+        ) {
+            alert("Bitte alle Felder ausfüllen!");
+            return;
+        }
+
         setIsPending(true);
         supabase
             .from("recipes")
-            .insert([{ name, description, servings, instructions, category_id: category }])
-            .then(() => {
-                setName("");
-                setDescription("");
-                setServings("");
-                setInstructions("");
-                setCategory("");
+            .insert([
+                {
+                    name,
+                    description,
+                    servings: parseInt(servings),
+                    instructions,
+                    category_id: category,
+                },
+            ])
+            .select("id")
+            .single()
+            .then((result) => {
+                console.log("DATA", result);
                 setIsPending(false);
-                navigate(`/rezepte/${id}`)
+                if (result.data) {
+                    const data = result.data;
+
+                    setName("");
+                    setDescription("");
+                    setServings("");
+                    setInstructions("");
+                    setCategory("");
+                    navigate(`/rezepte/${data.id}`);
+                }
             });
     };
 
     return (
-        <section>
+        <section className="neues_rezept">
+            <h2>Neues Rezept erstellen</h2>
             <form>
                 <input
                     type="text"
@@ -96,6 +124,7 @@ const NeuesRezeptPage = () => {
                 </select>
                 <br />
                 <button
+                    className="green_btn"
                     disabled={isPending}
                     onClick={handleSubmit}
                     type="submit"

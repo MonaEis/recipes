@@ -1,15 +1,16 @@
 import { NavLink } from "react-router";
 import "../styles/navi.css";
+import logoImg from "../assets/img/loeffelgruen_logo.svg";
 
 const Navi = () => {
     return (
-        <nav>
+        <nav id="start">
             <div className="color_stripe"></div>
             <div className="navi">
                 <a href="/">
                     <div className="logo">
                         <img
-                            src="src/assets/img/loeffelgruen_logo.svg"
+                            src={logoImg}
                             alt="Logo"
                         />
                         <h2>Löffelgrün</h2>

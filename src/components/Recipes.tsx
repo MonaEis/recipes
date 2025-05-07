@@ -3,7 +3,7 @@ import { supabase } from "../lib/supabaseClient";
 import { NavLink } from "react-router";
 import "../styles/recipes.css";
 
-type Recipe = {
+export type Recipe = {
     category_id: string;
     created_at: string;
     description: string;

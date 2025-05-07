@@ -21,17 +21,16 @@ type RecipeDetail = {
         quantity?: number | null;
         recipe_id?: string;
         unit?: string | null;
-    };
+    }[];
     categories: {
-          created_at: string
-          id: string
-          name: string
-        }
+        created_at: string;
+        id: string;
+        name: string;
+    };
 };
 
-
 const RezeptDetailPage = () => {
-    const { id } = useParams();
+    const id = useParams().id!;
     const navigate = useNavigate();
     const [recipe, setRecipe] = useState<RecipeDetail[]>([]);
 
@@ -50,20 +49,24 @@ const RezeptDetailPage = () => {
     // console.log(recipe[0])
     // console.log(recipe[0].ingredients)
 
-const handleChange = () =>{
-    navigate("/neuesrezept")
-}
+    const handleChange = () => {
+        navigate("/neuesrezept");
+    };
 
     const handleDelete = () => {
-        supabase.from("recipes").delete().eq("id", id).then(()=>{
-            navigate("/rezepte")
-        });
+        supabase
+            .from("recipes")
+            .delete()
+            .eq("id", id)
+            .then(() => {
+                navigate("/rezepte");
+            });
     };
 
     return (
         <article className="recipe_detail">
             {recipe.map((recipe) => (
-                <>
+                <div key={recipe.id} >
                     <section className="header">
                         <div className="image-container">
                             <img
@@ -74,7 +77,10 @@ const handleChange = () =>{
                         </div>
                     </section>
                     <section className="intro">
-                        <h2>ein schönes Rezept aus der Kategorie: {recipe.categories.name}</h2>
+                        <h2>
+                            ein schönes Rezept aus der Kategorie:{" "}
+                            {recipe.categories.name}
+                        </h2>
                         <h2>{recipe.rating} Sterne Bewertung</h2>
                     </section>
                     <section className="ingridients">
@@ -83,7 +89,8 @@ const handleChange = () =>{
                             {recipe.ingredients.map((ingridient) => (
                                 <li>
                                     {ingridient.quantity} {ingridient.unit}{" "}
-                                    {ingridient.name}
+                                    {ingridient.name}{" "}
+                                    <em>{ingridient.additional_info}</em>
                                 </li>
                             ))}
                         </ul>
@@ -94,15 +101,17 @@ const handleChange = () =>{
                     </section>
                     <section className="additional_info">
                         <h2>Zusätzliche Informationen</h2>
-                        <p>{recipe.ingredients.additional_info}</p>
                         <p>{recipe.servings} Portionen</p>
                     </section>
                     <section className="buttons">
-                    <button onClick={handleChange} className="green_btn">Ändern</button>
-                    <button onClick={handleDelete} className="green_btn">Löschen</button>
-                        
+                        <button onClick={handleChange} className="green_btn">
+                            Ändern
+                        </button>
+                        <button onClick={handleDelete} className="green_btn">
+                            Löschen
+                        </button>
                     </section>
-                </>
+                </div>
             ))}
         </article>
     );

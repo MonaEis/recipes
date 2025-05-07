@@ -16,6 +16,7 @@ img {
 html{
   font-size: 10px;
   font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
 :root {

@@ -2,6 +2,23 @@
     padding: 8rem 8vw;
 }
 
+.recipes input{
+    min-width: 20%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--c-white200);
+    color: var(--c-green);
+    font-weight: 600;
+    margin-bottom: 4rem;
+
+}
+
+.recipes input::placeholder {
+	color:var(--c-green);
+    font-style: italic;
+}
+
 .recipes h2{
     text-align: center;
     font-size: var(--fs-40);

@@ -1,0 +1,42 @@
+.neues_rezept{
+    padding: 8rem 8vw;
+}
+
+.neues_rezept h2{
+    text-align: center;
+    font-size: var(--fs-40);
+    color: var(--c-black800);
+    margin-bottom: 4rem;
+}
+
+
+.neues_rezept input, .neues_rezept textarea{
+    min-width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--c-white200);
+    color: var(--c-green);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.neues_rezept textarea{
+    height: 10vh;
+}
+
+.neues_rezept ::placeholder {
+	color:var(--c-green);
+    font-style: italic;
+}
+
+.neues_rezept select{
+    min-width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--c-white200);
+    color: var(--c-green);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
