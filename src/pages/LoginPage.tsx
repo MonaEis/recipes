@@ -20,9 +20,13 @@ const LoginPage = () => {
 
         if (result.error) {
             console.error(result.error);
+            alert("Passwort oder Email falsch");
         } else {
             navigate("/");
         }
+
+        
+
     };
     return (
         <section className="login_page">

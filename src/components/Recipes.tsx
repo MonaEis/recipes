@@ -86,7 +86,7 @@ const Recipes = () => {
                     <h2>Gefundene Rezepte</h2>
                     <section className="latest">
                         {allRecipes.map((recipe) => (
-                            <div className="tile">
+                            <div key={recipe.id} className="tile">
                                 <img
                                     src={recipe.imageUrl?.toString()}
                                     alt={recipe.name}
@@ -112,7 +112,7 @@ const Recipes = () => {
                     <h2>Die beliebtesten Rezepte</h2>
                     <section className="favourites">
                         {favouriteRecipes.map((recipe) => (
-                            <div className="tile">
+                            <div key={recipe.id} className="tile">
                                 <img
                                     src={recipe.imageUrl?.toString()}
                                     alt={recipe.name}
@@ -133,7 +133,7 @@ const Recipes = () => {
                     <h2>Neueste Rezepte</h2>
                     <section className="latest">
                         {latestRecipes.map((recipe) => (
-                            <div className="tile">
+                            <div  key={recipe.id} className="tile">
                                 <img
                                     src={recipe.imageUrl?.toString()}
                                     alt={recipe.name}
