@@ -1,0 +1,46 @@
+.login_status .login_btn {
+    background-color: var(--c-green);
+    color: var(--c-white100);
+    font-size: var(--fs-20);
+    padding: 1rem 3.3rem;
+    border-radius: 3.2rem;
+    cursor: pointer;
+    border-style: none;
+    transition: 0.5s;
+}
+
+.login_status .login_btn:hover {
+    transform: scale(1.1) rotate(3deg);
+    background-color: var(--c-white100);
+    color: var(--c-green);
+    
+    box-shadow: 0 0 10px var(--c-greenlight);
+}
+
+.logged_in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.logged_in a{
+    font-size: var(--fs-15);
+}
+
+
+
+.logged_in a:hover{
+    transform: rotate(3deg);
+    text-underline-offset: 1rem;
+    text-decoration: underline;
+    text-decoration-color: var(--c-green);
+}
+
+
+.logged_in a.active{
+    transform: rotate(3deg);
+    text-underline-offset: 1rem;
+    text-decoration: underline;
+    text-decoration-color: var(--c-green);
+}

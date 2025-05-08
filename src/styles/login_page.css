@@ -1,0 +1,34 @@
+.login_page{
+    padding: 8rem 8vw;
+}
+
+.login_page h2{
+    text-align: center;
+    font-size: var(--fs-40);
+    color: var(--c-black800);
+    margin-bottom: 4rem;
+}
+
+
+.login_page .signin_btn{
+    margin-bottom: 2rem;
+}
+.login_page .logout_btn{
+    display: inline-block;
+    background-color: var(--c-green);
+    color: var(--c-white100);
+    font-size: var(--fs-20);
+    padding: 1rem 3.3rem;
+    border-radius: 3.2rem;
+    cursor: pointer;
+    border-style: none;
+    transition: 0.5s;
+}
+
+.login_page .logout_btn:hover{
+  transform: scale(1.1) rotate(3deg);
+  background-color: var(--c-white100);
+  color: var(--c-green);
+  
+  box-shadow: 0 0 10px var(--c-greenlight);
+}

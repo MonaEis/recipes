@@ -6,28 +6,34 @@ import RezeptDetailPage from "./pages/RezeptDetailPage";
 import RootLayout from "./components/RootLayout";
 import StandardHeaderLayout from "./components/StandardHeaderLayout";
 import NeuesRezeptPage from "./pages/NeuesRezeptPage";
+import LoginPage from "./pages/LoginPage";
+import { AuthContextProvider } from "./context/auth-context";
 
 const router = createBrowserRouter([
-    { Component: RootLayout,
-        children: [{
-            
+    {
+        Component: RootLayout,
+        children: [
+            {
                 Component: StandardHeaderLayout,
                 children: [
                     { path: "/", Component: HomePage },
                     { path: "/rezepte", Component: RezeptePage },
                     { path: "/ueberuns", Component: UeberUnsPage },
                     { path: "/neuesrezept", Component: NeuesRezeptPage },
+                    { path: "/login", Component: LoginPage },
                 ],
             },
-            { path: "/rezepte/:id", Component: RezeptDetailPage }
-        ]
-    }
-    
-    
+            { path: "/rezepte/:id", Component: RezeptDetailPage },
+        ],
+    },
 ]);
 
 function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <AuthContextProvider>
+            <RouterProvider router={router} />;
+        </AuthContextProvider>
+    );
 }
 
 export default App;

@@ -28,6 +28,7 @@ html{
 --c-black950: #000000;
 --c-white100: #FFFFFF;
 --c-white200: #F5F2F2;
+--fs-15: 1.5rem;
 --fs-20: 2rem;
 --fs-24: 2.4rem;
 --fs-26: 2.6rem;
@@ -57,4 +58,31 @@ a{
   color: var(--c-green);
   
   box-shadow: 0 0 10px var(--c-greenlight);
+}
+
+input, textarea{
+  min-width: 100%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: var(--c-white200);
+  color: var(--c-green);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+::placeholder {
+color:var(--c-green);
+  font-style: italic;
+}
+
+select{
+  min-width: 100%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: var(--c-white200);
+  color: var(--c-green);
+  font-weight: 600;
+  margin-bottom: 2rem;
 }

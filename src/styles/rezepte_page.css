@@ -49,3 +49,9 @@
     font-size: var(--fs-20);
     color: var(--c-black800);
 }
+
+.all_recipes .info_text{
+    color: var(--c-green);
+    text-align: center;
+    font-size: var(--fs-30);
+}

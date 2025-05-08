@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import "../styles/navi.css";
 import logoImg from "../assets/img/loeffelgruen_logo.svg";
+import LoginStatus from "./LoginStatus";
 
 const Navi = () => {
     return (
@@ -22,7 +23,8 @@ const Navi = () => {
                     <NavLink className="active_link" to={"/ueberuns"}>Über uns</NavLink>
                     <NavLink className="active_link" to={"/neuesrezept"}>Neues Rezept</NavLink>
                 </div>
-                <NavLink className="active_link" to={"/login"}>Login</NavLink>
+                {/* <NavLink className="active_link" to={"/login"}>Login</NavLink> */}
+                <LoginStatus/>
             </div>
         </nav>
     );

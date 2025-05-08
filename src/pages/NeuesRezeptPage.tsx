@@ -84,7 +84,7 @@ const NeuesRezeptPage = () => {
                 />
                 <br />
                 <input
-                    type="text"
+                    type="number"
                     name="servings"
                     placeholder="Anzahl der Portionen"
                     value={servings}

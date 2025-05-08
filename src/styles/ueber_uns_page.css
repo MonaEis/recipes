@@ -1,0 +1,22 @@
+.ueber_uns{
+    padding: 8rem 8vw;
+}
+
+.ueber_uns h2{
+    text-align: center;
+    font-size: var(--fs-40);
+    color: var(--c-black800);
+    margin-bottom: 4rem;
+}
+
+.ueber_uns p {
+    text-align: justify;
+    font-size: var(--fs-26);
+    color: var(--c-black800);
+    margin-bottom: 4rem;
+}
+
+.ueber_uns span {
+    font-style: italic;
+    font-weight: 600;
+}
