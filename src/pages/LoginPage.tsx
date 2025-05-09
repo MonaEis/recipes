@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { supabase } from "../lib/supabaseClient";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useAuthContext } from "../context/auth-context";
 import "../styles/login_page.css";
 
@@ -42,7 +42,7 @@ const LoginPage = () => {
                             placeholder="Email eingeben"
                             ref={emailRef}
                         />
-                        <br />
+                        
                         <input
                             type="password"
                             name="password"
@@ -51,12 +51,13 @@ const LoginPage = () => {
                             placeholder="Passwort eingeben"
                             ref={passwordRef}
                         />
-                        <br />
+                        
                         <button type="submit" className="green_btn signin_btn">
                             Anmelden
                         </button>
-                        <br />
-                        <a href="#">Passwort vergessen</a>
+                        
+                        <Link to="#" className="password_link">Passwort vergessen</Link>
+                        <p className="signup_link">Du hast keinen Account? <Link to="/signup">Sign up</Link></p>
                     </form>
                 </>
             )}

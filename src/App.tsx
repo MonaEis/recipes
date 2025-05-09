@@ -8,6 +8,7 @@ import StandardHeaderLayout from "./components/StandardHeaderLayout";
 import NeuesRezeptPage from "./pages/NeuesRezeptPage";
 import LoginPage from "./pages/LoginPage";
 import { AuthContextProvider } from "./context/auth-context";
+import { SignupPage } from "./pages/SignupPage";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
                     { path: "/ueberuns", Component: UeberUnsPage },
                     { path: "/neuesrezept", Component: NeuesRezeptPage },
                     { path: "/login", Component: LoginPage },
+                    { path: "/signup", Component: SignupPage },
                 ],
             },
             { path: "/rezepte/:id", Component: RezeptDetailPage },
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
 function App() {
     return (
         <AuthContextProvider>
-            <RouterProvider router={router} />;
+            <RouterProvider router={router} />
         </AuthContextProvider>
     );
 }

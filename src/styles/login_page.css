@@ -9,6 +9,11 @@
     margin-bottom: 4rem;
 }
 
+.login_page form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
 
 .login_page .signin_btn{
     margin-bottom: 2rem;
@@ -31,4 +36,25 @@
   color: var(--c-green);
   
   box-shadow: 0 0 10px var(--c-greenlight);
+}
+
+.login_page .password_link{
+    font-size: var(--fs-15);
+    color: var(--c-green);
+    text-decoration: 1px solid underline;
+    margin-bottom: 4rem;
+}
+
+
+.login_page .signup_link {
+    font-size: var(--fs-15);
+    color: var(--c-black800);
+    font-weight: 600;
+}
+
+.login_page .signup_link a{
+    
+    color: var(--c-green);
+    text-decoration: 1px solid underline;
+    
 }
