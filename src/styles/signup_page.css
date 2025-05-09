@@ -2,11 +2,29 @@
     padding: 8rem 8vw;
 }
 
+.signup_page .logo_headline{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.signup_page img{
+    height: 5rem;
+    width: 5rem;
+}
+
+
+
 .signup_page h2{
     text-align: center;
     font-size: var(--fs-40);
     color: var(--c-black800);
     margin-bottom: 4rem;
+}
+
+.signup_page .text{
+    text-align: center;
 }
 
 .signup_page p{

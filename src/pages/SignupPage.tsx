@@ -2,11 +2,14 @@ import { supabase } from "../lib/supabaseClient";
 import { useState } from "react";
 import "../styles/signup_page.css";
 import { Link } from "react-router";
+import logoImg from "../assets/img/loeffelgruen_logo_black.svg";
 
 export function SignupPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -26,6 +29,13 @@ export function SignupPage() {
             const { error } = await supabase.auth.signUp({
                 email,
                 password,
+                options:{
+                    data:{
+                        first_name: firstName,
+                        last_name: lastName
+
+                    }
+                }
             });
             if (error) throw error;
             setSuccess(true);
@@ -42,15 +52,17 @@ export function SignupPage() {
         <div className="signup_page">
             {success ? (
                 <section>
-                    <div>
+                    <div className="logo_headline">
+                        <img src={logoImg} alt="Logo" />
                         <h2 >
                             Danke für deine Anmeldung!
-                        </h2>
+                           </h2>
+                           <img src={logoImg} alt="Logo" />
+                    </div>
+                    <div className="text">
                         <p>
                             Überprüfe dein Postfach und bestätige deine E-Mail
                         </p>
-                    </div>
-                    <div>
                         <p>
                         Du hast dich erfolgreich registriert. Bitte überprüfe deine E-Mails, um dein Konto zu bestätigen, bevor du dich einloggst.
                         </p>
@@ -65,6 +77,32 @@ export function SignupPage() {
                     <div>
                         <form onSubmit={handleSignUp}>
                             <div>
+                                <div>
+                                    {/* <label htmlFor="email">Email</label> */}
+                                    <input
+                                        id="firstname"
+                                        type="text"
+                                        placeholder="Vorname"
+                                        required
+                                        value={firstName}
+                                        onChange={(e) =>
+                                            setFirstName(e.target.value)
+                                        }
+                                    />
+                                </div>
+                                <div>
+                                    {/* <label htmlFor="email">Email</label> */}
+                                    <input
+                                        id="lastname"
+                                        type="text"
+                                        placeholder="Nachname"
+                                        required
+                                        value={lastName}
+                                        onChange={(e) =>
+                                            setLastName(e.target.value)
+                                        }
+                                    />
+                                </div>
                                 <div>
                                     {/* <label htmlFor="email">Email</label> */}
                                     <input
