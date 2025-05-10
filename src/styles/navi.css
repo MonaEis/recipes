@@ -4,43 +4,41 @@ nav .color_stripe {
     background-color: var(--c-green);
 }
 
-nav .navi{
+nav .navi {
     display: flex;
     justify-content: space-between;
-    padding: 3rem 8vw 3rem 15vw;
+    padding: 3rem 8vw;
     align-items: center;
 }
 
-nav .logo{
+nav .logo {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
-nav .logo img{
+nav .logo img {
     height: 3rem;
 }
 
-nav .logo h2{
+nav .logo h2 {
     font-size: var(--fs-26);
     color: var(--c-green);
     font-weight: 500;
 }
 
-nav .links{
+nav .links {
     display: flex;
     gap: 2vw;
     align-items: center;
 }
 
-nav a{
+nav a {
     font-size: var(--fs-26);
     font-weight: 600;
     color: var(--c-black800);
-    transition: all 0.3s ease-in-out;
-    text-decoration-color: var(--c-green);
 
-   
+    text-decoration-color: var(--c-green);
 }
 
 nav a.active_link:hover {
@@ -50,10 +48,33 @@ nav a.active_link:hover {
     text-decoration-color: var(--c-green);
 }
 
-
 nav .active_link.active {
     transform: rotate(3deg);
     text-underline-offset: 1rem;
     text-decoration: underline;
     text-decoration-color: var(--c-green);
+}
+
+nav .rechts {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+nav .rechts .profil_icon {
+    outline: var(--c-green) solid 0.2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .rechts img {
+    height: 2rem;
+}
+
+nav .rechts .profil_icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }

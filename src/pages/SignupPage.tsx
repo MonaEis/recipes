@@ -29,13 +29,12 @@ export function SignupPage() {
             const { error } = await supabase.auth.signUp({
                 email,
                 password,
-                options:{
-                    data:{
+                options: {
+                    data: {
                         first_name: firstName,
-                        last_name: lastName
-
-                    }
-                }
+                        last_name: lastName,
+                    },
+                },
             });
             if (error) throw error;
             setSuccess(true);
@@ -54,17 +53,17 @@ export function SignupPage() {
                 <section>
                     <div className="logo_headline">
                         <img src={logoImg} alt="Logo" />
-                        <h2 >
-                            Danke für deine Anmeldung!
-                           </h2>
-                           <img src={logoImg} alt="Logo" />
+                        <h2>Danke für deine Anmeldung!</h2>
+                        <img src={logoImg} alt="Logo" />
                     </div>
                     <div className="text">
                         <p>
                             Überprüfe dein Postfach und bestätige deine E-Mail
                         </p>
                         <p>
-                        Du hast dich erfolgreich registriert. Bitte überprüfe deine E-Mails, um dein Konto zu bestätigen, bevor du dich einloggst.
+                            Du hast dich erfolgreich registriert. Bitte
+                            überprüfe deine E-Mails, um dein Konto zu
+                            bestätigen, bevor du dich einloggst.
                         </p>
                     </div>
                 </section>
@@ -150,11 +149,7 @@ export function SignupPage() {
                                         }
                                     />
                                 </div>
-                                {error && (
-                                    <p className="error">
-                                        {error}
-                                    </p>
-                                )}
+                                {error && <p className="error">{error}</p>}
                                 <button
                                     type="submit"
                                     className="green_btn"
@@ -167,12 +162,7 @@ export function SignupPage() {
                             </div>
                             <div className="login_link">
                                 Du hast schon einen Account?{" "}
-                                <Link
-                                    to="/login"
-                
-                                >
-                                    Login
-                                </Link>
+                                <Link to="/login">Login</Link>
                             </div>
                         </form>
                     </div>

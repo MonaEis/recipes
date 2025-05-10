@@ -6,7 +6,7 @@
     border-radius: 3.2rem;
     cursor: pointer;
     border-style: none;
-    transition: 0.5s;
+
 }
 
 .login_status .login_btn:hover {

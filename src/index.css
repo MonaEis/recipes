@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.4s ease-in-out
 }
 
 img {
@@ -17,6 +18,7 @@ html{
   font-size: 10px;
   font-family: var(--font-family);
   scroll-behavior: smooth;
+  
 }
 
 :root {
@@ -49,7 +51,7 @@ a{
     border-radius: 3.2rem;
     cursor: pointer;
     border-style: none;
-    transition: 0.5s;
+    
 }
 
 .green_btn:hover{

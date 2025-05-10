@@ -9,6 +9,7 @@ import NeuesRezeptPage from "./pages/NeuesRezeptPage";
 import LoginPage from "./pages/LoginPage";
 import { AuthContextProvider } from "./context/auth-context";
 import { SignupPage } from "./pages/SignupPage";
+import ProfilPage from "./pages/ProfilPage";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
                     { path: "/neuesrezept", Component: NeuesRezeptPage },
                     { path: "/login", Component: LoginPage },
                     { path: "/signup", Component: SignupPage },
+                    { path: "/profil", Component: ProfilPage },
                 ],
             },
             { path: "/rezepte/:id", Component: RezeptDetailPage },

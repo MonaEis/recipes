@@ -65,6 +65,24 @@ export type Database = {
           },
         ]
       }
+      profiles: {
+        Row: {
+          first_name: string
+          id: string
+          last_name: string
+        }
+        Insert: {
+          first_name: string
+          id: string
+          last_name: string
+        }
+        Update: {
+          first_name?: string
+          id?: string
+          last_name?: string
+        }
+        Relationships: []
+      }
       recipes: {
         Row: {
           category_id: string
