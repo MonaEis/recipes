@@ -27,6 +27,7 @@
     border-radius: 3.2rem;
     cursor: pointer;
     border-style: none;
+    transition: all 0.4s ease-in-out
 }
 
 .login_page .logout_btn:hover{

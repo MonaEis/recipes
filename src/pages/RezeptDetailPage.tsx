@@ -100,8 +100,8 @@ const RezeptDetailPage = () => {
                         <p>{recipe.instructions}</p>
                     </section>
                     <section className="additional_info">
-                        <h2>Zusätzliche Informationen</h2>
-                        <p>{recipe.servings} Portionen</p>
+                        <h2>Das Rezept ist für</h2>
+                        <p>{recipe.servings} Portion(en)</p>
                     </section>
                     <section className="buttons">
                         <button onClick={handleChange} className="green_btn">

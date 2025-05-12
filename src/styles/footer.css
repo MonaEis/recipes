@@ -45,7 +45,8 @@ footer .social_media .icon {
     border-radius: 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    transition: all 0.4s ease-in-out
 }
 
 footer .social_media .icon img{

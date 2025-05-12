@@ -29,7 +29,8 @@ const Recipes = () => {
         supabase
             .from("recipes")
             .select("*")
-            .order("rating", { ascending: false })
+            .not("rating", "is", null)
+            .order("rating", { ascending: false }) //* Warum kommen hier die null Werte als erstest?
             .limit(3)
             .then((result) => {
                 console.log(result.data);

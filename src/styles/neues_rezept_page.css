@@ -13,3 +13,35 @@
 .neues_rezept textarea{
     height: 10vh;
 }
+
+.neues_rezept h3{
+    text-align: center;
+    font-size: var(--fs-26);
+    color: var(--c-black800);
+    margin-bottom: 2rem;
+}
+
+.neues_rezept__ingredients input{
+        min-width: unset;
+}
+
+.neues_rezept__ingredient {
+    display: flex;
+    gap: 1rem;
+}
+
+.neues_rezept__ingredient input{
+    flex: 1;
+}
+
+.neues_rezept__ingredient input[name="ingredientname"]{
+    flex: 3;
+}
+
+.neues_rezept .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5rem;
+}
+
