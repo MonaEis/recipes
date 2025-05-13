@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 import { Link, NavLink } from "react-router";
 import "../styles/rezepte_page.css";
@@ -8,7 +7,9 @@ const RezeptePage = () => {
     const { data, isLoading, isError } = useQuery({
         queryKey: ["all_recipes"],
         queryFn: async () => {
-            const { data, error } = await supabase.from("recipes").select("*");
+            const { data, error } = await supabase
+                .from("recipes")
+                .select("*, recipe_favorites(*)");
             if (error) {
                 throw new Error(error.message);
             }
@@ -21,13 +22,14 @@ const RezeptePage = () => {
     return (
         <article className="all_recipes">
             {isLoading && <p className="info_text">Is Loading...</p>}
-            {isError && <div>
-                <p className="info_text">Leider kaputt...</p>
-                <Link to="/">
-                <button className="green_btn">zurück zu Home</button>
-                </Link>
-            </div>
-            }
+            {isError && (
+                <div>
+                    <p className="info_text">Leider kaputt...</p>
+                    <Link to="/">
+                        <button className="green_btn">zurück zu Home</button>
+                    </Link>
+                </div>
+            )}
 
             {!isLoading && data && (
                 <>
@@ -42,12 +44,28 @@ const RezeptePage = () => {
                                 <div className="tile_text">
                                     <h4>{recipe.name}</h4>
                                     <p>{recipe.description}</p>
-                                    <NavLink
-                                        className="green_btn"
-                                        to={`/rezepte/${recipe.id}`}
-                                    >
-                                        Zum Rezept
-                                    </NavLink>
+                                    <div className="buttons">
+                                        <NavLink
+                                            className="green_btn"
+                                            to={`/rezepte/${recipe.id}`}
+                                        >
+                                            Zum Rezept
+                                        </NavLink>
+                                        {recipe.recipe_favorites.length > 0 && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                className="lucide lucide-heart-icon lucide-heart"
+                                            >
+                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                            </svg>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         ))}

@@ -28,10 +28,14 @@ const Navi = () => {
                     <NavLink className="active_link" to={"/ueberuns"}>
                         Über uns
                     </NavLink>
-                    {session && (
+                    {session && (<> 
                         <NavLink className="active_link" to={"/neuesrezept"}>
                             Neues Rezept
                         </NavLink>
+                        <NavLink className="active_link" to={"/meine_rezepte"}>
+                            Meine Rezepte
+                        </NavLink>
+                    </>
                     )}
                 </div>
                 <div className="rechts">

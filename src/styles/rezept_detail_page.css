@@ -50,3 +50,56 @@
     line-height: 4rem;
     margin-bottom: 2rem;
 }
+
+.recipe_detail .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe_detail .lucide-heart-plus-icon{
+    height: 3rem;
+}
+
+.recipe_detail .favoriten_btn_active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--c-green);
+    color: var(--c-white100);
+    transition: all 0.4s ease-in-out
+
+}
+
+
+
+.recipe_detail .favoriten_btn_active:hover{
+    transform: scale(1.1) rotate(3deg);
+    background-color: var(--c-white100);
+    color: var(--c-green);
+    
+    box-shadow: 0 0 10px var(--c-greenlight);
+}
+.recipe_detail .favoriten_btn_inactive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: var(--c-white200);
+    color: var(--c-green);
+    transition: all 0.4s ease-in-out
+
+}
+.recipe_detail .favoriten_btn_inactive:hover{
+    transform: scale(1.1) rotate(3deg);
+    background-color: var(--c-green);
+    color: var(--c-white100);
+    
+    box-shadow: 0 0 10px var(--c-greenlight);
+}

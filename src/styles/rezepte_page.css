@@ -55,3 +55,15 @@
     text-align: center;
     font-size: var(--fs-30);
 }
+
+.all_recipes .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.all_recipes .buttons .lucide-heart-icon{
+    color: var(--c-green);
+    height: 3rem;
+}

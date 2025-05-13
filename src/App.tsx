@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import { AuthContextProvider } from "./context/auth-context";
 import { SignupPage } from "./pages/SignupPage";
 import ProfilPage from "./pages/ProfilPage";
+import MeineRezeptePage from "./pages/MeineRezeptePage";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
                     { path: "/login", Component: LoginPage },
                     { path: "/signup", Component: SignupPage },
                     { path: "/profil", Component: ProfilPage },
+                    { path: "/meine_rezepte", Component: MeineRezeptePage },
                 ],
             },
             { path: "/rezepte/:id", Component: RezeptDetailPage },
