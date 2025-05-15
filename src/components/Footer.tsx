@@ -3,7 +3,7 @@ import logoImg from "../assets/img/loeffelgruen_logo_black.svg";
 import ytLogo from "../assets/img/YT.png";
 import twitterLogo from "../assets/img/Twitter.png";
 import instaLogo from "../assets/img/instagram.png";
-import pinterestLogo from "../assets/img/pinterest.png";
+import pinterestLogo from "../assets/img/Pinterest.png";
 
 const Footer = () => {
   return (
