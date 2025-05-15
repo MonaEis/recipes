@@ -9,6 +9,34 @@
     margin-bottom: 4rem;
 }
 
+.profil .profile_photo{
+    display: flex;
+    justify-content: center;
+}
+
+.profil .profile_photo img{
+    object-fit: cover;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 10rem;
+    border: 0.4rem solid var(--c-green);
+    margin-bottom: 4rem;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(2880deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate360 15s linear;
+}
+
+
 .profil p{
     text-align: center;
     font-size: var(--fs-26);
@@ -28,4 +56,15 @@
     text-align: center;
     font-size: var(--fs-30);
     margin-bottom: 4rem;
+}
+
+.profil .image_upload{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+.profil input {
+    margin-bottom: 0;
 }

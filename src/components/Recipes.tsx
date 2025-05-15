@@ -30,7 +30,7 @@ const Recipes = () => {
             .from("recipes")
             .select("*")
             .not("rating", "is", null)
-            .order("rating", { ascending: false }) //* Warum kommen hier die null Werte als erstest?
+            .order("rating", { ascending: false }) 
             .limit(3)
             .then((result) => {
                 console.log(result.data);
