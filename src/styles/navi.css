@@ -7,7 +7,7 @@ nav .color_stripe {
 nav .navi {
     display: flex;
     justify-content: space-between;
-    padding: 3rem 8vw;
+    padding: 3rem 5vw;
     align-items: center;
 }
 
@@ -34,7 +34,7 @@ nav .links {
 }
 
 nav a {
-    font-size: var(--fs-26);
+    font-size: var(--fs-24);
     font-weight: 600;
     color: var(--c-black800);
 
