@@ -1,10 +1,10 @@
 # 🥄 Löffelgrün – A Recipe Platform
 
 <div align="center">
-  <img src="./assets/screenshots/loeffelgruen-desktop.png" alt="Löffelgrün Screenshot" />
+  <img src="src/assets/screenshots/loeffelgruen-desktop_4.png" alt="Löffelgrün Screenshot" />
 </div>
 
-**Löffelgrün** is a recipe web app developed during my Fullstack Web Development Bootcamp. Built using **React**, **Vite**, and **Supabase**, it allows users to explore and manage recipes with a sleek, responsive UI. This project is part of my learning journey and reflects my growing skills in modern web development.
+**Löffelgrün** is a recipe web app developed during my Web Development Bootcamp. Built using **React**, **Vite**, and **Supabase**, it allows users to explore and manage recipes with a sleek, responsive UI. This project is part of my learning journey and reflects my growing skills in modern web development.
 
 ---
 
@@ -17,6 +17,7 @@
   - [Installation](#installation)
 - [Design](#design)
 - [Deployment](#deployment)
+- [Work in Progress 🚧](#work-in-progress-🚧)
 
 ---
 
@@ -26,12 +27,19 @@
 
 ### Key Features:
 
-- View a collection of recipes
-- Filter recipes by type or category
-- Add and save your own recipes
-- Responsive design for all screen sizes
+- View a collection of recipes  
+- Add, save and delete your own recipes  
+- Search for recipes  
+- Add recipes to your favourites  
 
 This app was created as a solo project within a limited timeframe to practice **React**, **CSS styling**, and **backend integration with Supabase**.
+
+<div align="center">
+  <img src="src/assets/screenshots/loeffelgruen-desktop_trio.png" alt="Löffelgrün Screenshot" />
+</div>
+
+
+
 
 ---
 
@@ -89,15 +97,43 @@ Start the development server
 
     npm run dev
 
-Your app will be running at http://localhost:5173.
-Design
+Your app will be running at:
+👉 http://localhost:5173
 
-The UI was designed to be clean, accessible, and mobile-friendly. No component libraries were used – all layout and styling was done with custom CSS to practice fundamentals and gain more control over the design process.
-Responsive Example Screenshots:
-<div align="center"> <img src="./assets/screenshots/loeffelgruen-tablet.png" width="45%" /> <img src="./assets/screenshots/loeffelgruen-mobile.png" width="45%" /> </div>
-Deployment
 
-The app is deployed via GitHub Pages or Netlify (depending on your setup).
+## Design
+
+The design and name of **Löffelgrün** were fully created by me.  
+My goal was to craft a clean, modern, and user-friendly recipe platform with a fresh identity.
+
+All styling and layout were built using **custom CSS only** – no component libraries were used. This allowed me to deepen my understanding of fundamental styling and maintain full creative control over the visual appearance.
+
+⚠️ The app is **still a work in progress** – responsive layout for all screen sizes is currently being implemented.
+
+<!-- ### Responsive Example Screenshots:
+
+<div align="center">
+  <img src="./assets/screenshots/loeffelgruen-tablet.png" width="45%" />
+  <img src="./assets/screenshots/loeffelgruen-mobile.png" width="45%" />
+</div> -->
+
+
+## Deployment
+
+The app is deployed via Vercel.
 Here’s the live version of Löffelgrün:
 
-🔗 Live App
+🔗 [Live App](https://loeffelgruen.vercel.app/)
+
+
+## Work in Progress 🚧
+
+The following features are currently planned or in development:
+
+    ✅ Responsive design for all screen sizes
+
+    🧩 Filter recipes by type or category
+
+    ✏️ Edit own recipes after creation
+
+Stay tuned – updates coming soon!
