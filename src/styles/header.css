@@ -10,10 +10,55 @@ header{
     justify-content: center;
 }
 
+@media screen and (max-width: 1200px) {
+    header{
+    height: 30rem;
+   
+}
+}
+
+@media screen and (max-width: 900px) {
+    header{
+    height: 25rem;
+   
+}
+}
+
+@media screen and (max-width: 750px) {
+    header{
+    height: 20rem;
+   
+}
+}
+
 header h1{
     font-size: var(--fs-40);
     color: var(--c-white100);
     text-align: center;
     text-shadow: 0px 2px 6px rgba(71, 71, 71, 0.705);
     max-width: 70%;
+}
+
+@media screen and (max-width: 1200px) {
+    header h1{
+      max-width: 75%;
+}
+}
+
+@media screen and (max-width: 900px) {
+    header h1{
+      max-width: 80%;
+}
+}
+
+@media screen and (max-width: 750px) {
+    header h1{
+      max-width: 90%;
+}
+}
+
+@media screen and (max-width: 400px) {
+    header h1{
+      max-width: 95%;
+}
 }
