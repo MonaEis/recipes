@@ -4,6 +4,12 @@ nav .color_stripe {
     background-color: var(--c-green);
 }
 
+@media screen and (max-width: 850px) {
+   nav .color_stripe {
+    height: 1rem;
+}
+}
+
 nav .navi {
     display: flex;
     justify-content: space-between;
@@ -99,6 +105,8 @@ nav .navi_mobile{
 @media screen and (max-width: 850px) {
     nav .navi_mobile {
         display: flex;
+        padding: 2rem 3vw;
+
     }
 }
 

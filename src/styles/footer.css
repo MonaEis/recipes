@@ -6,6 +6,15 @@ footer {
     align-items: center;
 }
 
+@media screen and (max-width: 525px) {
+footer {
+    padding: 2.5rem 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+}
+
 footer .logo{
     display: flex;
     align-items: center;
@@ -21,11 +30,23 @@ footer .logo h2{
     color: var(--c-black800);
     font-weight: 500;
 }
+@media screen and (max-width: 525px) {
+footer .logo h2{
+    font-size: 4rem;
+}
+}
 
 footer .social_media{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+@media screen and (max-width: 525px) {
+footer .social_media{
+    width:100%;
+    gap: 1rem;
+    align-items: center;
+}
 }
 
 footer .social_media p{
@@ -36,6 +57,12 @@ footer .social_media p{
 footer .social_media .all_icons{
     display: flex;
     gap: 2rem;
+}
+@media screen and (max-width: 525px) {
+footer .social_media .all_icons{
+    display: flex;
+    gap: 2rem;
+}
 }
 
 footer .social_media .icon {
