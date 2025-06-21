@@ -2,6 +2,12 @@
     padding: 8rem 8vw;
 }
 
+@media screen and (max-width: 850px) {
+    .all_recipes{
+    padding: 4rem 3vw;
+}
+}
+
 .all_recipes h2{
     text-align: center;
     font-size: var(--fs-40);
@@ -14,6 +20,13 @@
     grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
     grid-column-gap: 3vw;
     grid-row-gap: 3vh;
+}
+
+@media screen and (max-width: 850px) {
+.all_recipes .recipe {
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vh;
+}
 }
 
 .all_recipes .recipe .tile{
@@ -29,6 +42,11 @@
     border-radius: 3.3rem 3.3rem 0 0;
 }
 
+@media screen and (max-width: 850px) {
+.all_recipes .recipe .tile img {
+    height: 18rem;
+}
+}
 
 .all_recipes .tile .tile_text{
     display: flex;
@@ -37,6 +55,12 @@
     align-items: flex-start;
     min-height: 300px;
     padding: 3rem 4rem 4rem 4rem;
+}
+@media screen and (max-width: 850px) {
+.all_recipes .tile .tile_text{
+        min-height: 150px;
+    padding: 2rem;
+}
 }
 
 .all_recipes  .tile h4{

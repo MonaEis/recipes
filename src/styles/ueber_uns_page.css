@@ -1,6 +1,11 @@
 .ueber_uns{
     padding: 8rem 8vw;
 }
+@media screen and (max-width: 850px) {
+    .ueber_uns{
+    padding: 4rem 3vw;
+}
+}
 
 .ueber_uns h2{
     text-align: center;
@@ -13,7 +18,7 @@
     text-align: justify;
     font-size: var(--fs-26);
     color: var(--c-black800);
-    margin-bottom: 4rem;
+
 }
 
 .ueber_uns span {
