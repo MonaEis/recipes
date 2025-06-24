@@ -1,7 +1,11 @@
 .recipe_favorites{
     padding: 8rem 8vw;
 }
-
+@media screen and (max-width: 850px) {
+    .recipe_favorites{
+        padding: 4rem 3vw;
+    }
+}
 .recipe_favorites h2{
     text-align: center;
     font-size: var(--fs-40);
@@ -36,7 +40,12 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
 }
-
+@media screen and (max-width: 850px) {
+.recipe_favorites .favorites{
+    padding: 0;
+    gap: 1.5rem;
+}
+}
 .recipe_favorites .favorites .tile{
     display: flex;
     gap: 3rem;
@@ -45,12 +54,24 @@
     border-radius: 3.3rem;
     background-color: var(--c-white200);
 }
+@media screen and (max-width: 850px) {
+.recipe_favorites .favorites .tile{
+    gap: 0.5rem;
+    height: 25rem;
+}
+}
 
 .recipe_favorites .favorites .tile img{
     height: 32rem;
     width: 30vw;
     object-fit: cover;
     border-radius: 3.3rem 0 0 3.3rem;
+}
+@media screen and (max-width: 850px) {
+.recipe_favorites .favorites .tile img{
+    height: 25rem;
+    width: 42vw;
+}
 }
 
 .recipe_favorites .favorites .tile .tile_text{
@@ -60,6 +81,13 @@
     align-items: flex-start;
     min-height: 300px;
     padding: 3rem 4rem 4rem 4rem;
+}
+@media screen and (max-width: 850px) {
+.recipe_favorites .favorites .tile .tile_text{
+    min-height: 12rem;
+        padding: 2rem 1rem;
+
+}
 }
 
 .recipe_favorites .info_text{

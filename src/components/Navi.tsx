@@ -19,15 +19,15 @@ const Navi = () => {
                 </a>
                 <div className="links">
                     <NavLink className="active_link" to={"/"}>
-                        Home
+                        Start
                     </NavLink>
                     {session && (
                         <NavLink className="active_link" to={"/rezepte"}>
                             Rezepte
                         </NavLink>
                     )}
-                    <NavLink className="active_link" to={"/ueberuns"}>
-                        Über uns
+                    <NavLink className="active_link" to={"/info"}>
+                        Info
                     </NavLink>
                     {session && (
                         <>
@@ -35,13 +35,13 @@ const Navi = () => {
                                 className="active_link"
                                 to={"/neuesrezept"}
                             >
-                                Neues Rezept
+                                Hinzufügen
                             </NavLink>
                             <NavLink
                                 className="active_link"
                                 to={"/meine_rezepte"}
                             >
-                                Meine Rezepte
+                                Favoriten
                             </NavLink>
                         </>
                     )}
@@ -80,15 +80,15 @@ const Navi = () => {
                 <div className="small_color_stripe"></div>
                 <div className="links">
                     <NavLink className="active_link" to={"/"}>
-                        Home
+                        Start
                     </NavLink>
                     {session && (
                         <NavLink className="active_link" to={"/rezepte"}>
                             Rezepte
                         </NavLink>
                     )}
-                    <NavLink className="active_link" to={"/ueberuns"}>
-                        Über uns
+                    <NavLink className="active_link" to={"/info"}>
+                        Info
                     </NavLink>
                     {session && (
                         <>
@@ -96,13 +96,13 @@ const Navi = () => {
                                 className="active_link"
                                 to={"/neuesrezept"}
                             >
-                                Neues Rezept
+                                Hinzufügen
                             </NavLink>
                             <NavLink
                                 className="active_link"
                                 to={"/meine_rezepte"}
                             >
-                                Meine Rezepte
+                                Favoriten
                             </NavLink>
                         </>
                     )}

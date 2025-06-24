@@ -1,6 +1,6 @@
 import "../styles/ueber_uns_page.css";
 
-const UeberUnsPage = () => {
+const InfoPage = () => {
     return (
         <section className="ueber_uns">
             <h2>Über Löffelgrün</h2>
@@ -29,4 +29,4 @@ const UeberUnsPage = () => {
     );
 };
 
-export default UeberUnsPage;
+export default InfoPage;
