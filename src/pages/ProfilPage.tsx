@@ -157,6 +157,7 @@ export function ProfilPage() {
                             type="submit"
                             className="green_btn"
                             onClick={handleUpload}
+                            disabled={!imageUpload}
                         >
                             Upload
                         </button>

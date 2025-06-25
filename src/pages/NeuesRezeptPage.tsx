@@ -3,6 +3,7 @@ import { supabase } from "../lib/supabaseClient";
 import { useNavigate } from "react-router";
 import "../styles/neues_rezept_page.css";
 import { produce } from "immer";
+import { useAuthContext } from "../context/auth-context";
 
 const NeuesRezeptPage = () => {
     const [name, setName] = useState("");
@@ -12,6 +13,7 @@ const NeuesRezeptPage = () => {
     const [category, setCategory] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const [isPending, setIsPending] = useState(false);
+const { session } = useAuthContext();
 
     type Ingredient = {
         name: string;
@@ -70,7 +72,8 @@ const NeuesRezeptPage = () => {
                     instructions,
                     category_id: category,
                     imageUrl,
-                },
+                    user_id: session!.user.id,
+},
             ])
             .select("id")
             .single()

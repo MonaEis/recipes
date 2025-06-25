@@ -139,6 +139,7 @@ export type Database = {
           name: string
           rating: number | null
           servings: number
+          user_id: string
         }
         Insert: {
           category_id?: string
@@ -150,6 +151,7 @@ export type Database = {
           name: string
           rating?: number | null
           servings: number
+          user_id: string
         }
         Update: {
           category_id?: string
@@ -161,6 +163,7 @@ export type Database = {
           name?: string
           rating?: number | null
           servings?: number
+          user_id?: string
         }
         Relationships: [
           {
@@ -168,6 +171,13 @@ export type Database = {
             columns: ["category_id"]
             isOneToOne: false
             referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "recipes_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
         ]

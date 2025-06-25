@@ -10,6 +10,7 @@ type RecipeDetail = {
     created_at: string;
     description: string;
     id: string;
+    user_id: string;
     imageUrl: string | null;
     instructions: string;
     name: string;
@@ -161,21 +162,25 @@ const RezeptDetailPage = () => {
                         <h2>Das Rezept ist für</h2>
                         <p>{recipe.servings} Portion(en)</p>
                     </section>
+
                     <section className="buttons">
-                        <div>
-                            <button
-                                onClick={handleChange}
-                                className="green_btn"
-                            >
-                                Ändern
-                            </button>
-                            <button
-                                onClick={handleDelete}
-                                className="green_btn"
-                            >
-                                Löschen
-                            </button>
-                        </div>
+                        {recipe?.user_id === session?.user?.id && (
+                            <div>
+                                <button
+                                    onClick={handleChange}
+                                    className="green_btn"
+                                >
+                                    Ändern
+                                </button>
+                                <button
+                                    onClick={handleDelete}
+                                    className="green_btn"
+                                >
+                                    Löschen
+                                </button>
+                            </div>
+                        )}
+
                         {isFavorite && (
                             <button
                                 className="favoriten_btn_active"
@@ -183,7 +188,6 @@ const RezeptDetailPage = () => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
@@ -205,7 +209,6 @@ const RezeptDetailPage = () => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
