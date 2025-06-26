@@ -11,6 +11,7 @@
 ## Table of Contents 📑
 
 - [About](#about)
+- [Authentication](#authentication)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prequisites](#prequisites)
@@ -23,23 +24,50 @@
 
 ## About
 
-**Löffelgrün** is a culinary web application where users can browse and contribute recipes. It combines a clean and user-friendly frontend built in **React** with a backend powered by **Supabase** for real-time data storage and authentication.
+**Löffelgrün** is a culinary web app where users can browse, create, and manage recipes. The frontend is built with **React** and styled with **custom CSS**, while **Supabase** handles the backend, authentication, and real-time database features.
 
-### Key Features:
 
-- View a collection of recipes  
-- Add, save and delete your own recipes  
-- Search for recipes  
-- Add recipes to your favourites  
+### ✨ Key Features:
 
-This app was created as a solo project within a limited timeframe to practice **React**, **CSS styling**, and **backend integration with Supabase**.
+- 📖 Browse a collection of recipes  
+- ➕ Add, edit, and delete your own recipes  
+- 🔍 Search recipes by title  
+- ⭐ Save recipes to your favourites  
+- 📱 Responsive UI for all screen sizes 
+
+
+This app was created as a solo project to deepen my knowledge in **React**, **state management** and **backend-as-a-service** platforms like Supabase.
 
 <div align="center">
   <img src="src/assets/screenshots/loeffelgruen-desktop_trio.png" alt="Löffelgrün Screenshot" />
 </div>
 
 
+---
+## Authentication:
 
+User authentication is handled via Supabase Auth. Users can sign up and log in using their email and password.
+
+Once authenticated, users can:
+
+- Browse and view all available recipes
+
+- Add their own recipes
+
+- Add a picture to their profile 
+
+- Edit and delete their own recipes
+
+- Save recipes to their favourites
+
+Supabase handles session management and provides secure access via JWT tokens in the background. All interactions with the backend are scoped to the authenticated user.
+⚠️ Auth state is preserved across sessions using Supabase’s built-in client library.
+
+<div align="center">
+  <img src="src/assets/screenshots/iPad_Auth_1.png" width="30%" />
+  <img src="src/assets/screenshots/iPad_Auth_2.png" width="30%" />
+  <img src="src/assets/screenshots/iPad_Auth_3.png" width="30%" /> 
+</div>
 
 ---
 
@@ -52,14 +80,15 @@ This app was created as a solo project within a limited timeframe to practice **
 **Backend / BaaS:**  
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
-**Markup & Styling:**  
+**Styling:**  
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-**Development Tools:**  
-![Visual Studio Code](https://img.shields.io/badge/VS_Code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white)  
+**Dev Tools:**  
+![VS Code](https://img.shields.io/badge/VS_Code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white)  
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)  
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
 
 ---
 
@@ -103,19 +132,18 @@ Your app will be running at:
 
 ## Design
 
-The design and name of **Löffelgrün** were fully created by me.  
-My goal was to craft a clean, modern, and user-friendly recipe platform with a fresh identity.
+The design and branding of **Löffelgrün** were fully developed by me.
+My goal was a clean, modern, and user-first experience — with a unique visual identity that feels fresh and approachable.
 
-All styling and layout were built using **custom CSS only** – no component libraries were used. This allowed me to deepen my understanding of fundamental styling and maintain full creative control over the visual appearance.
+All layouts were built using **vanilla CSS**, without any UI libraries, to keep full control and build styling skills from the ground up.
 
-⚠️ The app is **still a work in progress** – responsive layout for all screen sizes is currently being implemented.
-
-<!-- ### Responsive Example Screenshots:
+### Responsive Example Screenshots:
 
 <div align="center">
-  <img src="./assets/screenshots/loeffelgruen-tablet.png" width="45%" />
-  <img src="./assets/screenshots/loeffelgruen-mobile.png" width="45%" />
-</div> -->
+  <img src="src/assets/screenshots/iPhone-13-PRO-loeffelgruen.vercel.app.png" width="10%" />
+  <img src="src/assets/screenshots/iPad-PRO-11-loeffelgruen.vercel.app.png" width="20%" />
+  <img src="src/assets/screenshots/Macbook-Air-loeffelgruen.vercel.app_4.png" width="65%" />
+</div>
 
 
 ## Deployment
@@ -128,12 +156,16 @@ Here’s the live version of Löffelgrün:
 
 ## Work in Progress 🚧
 
-The following features are currently planned or in development:
+The following features are currently planned or in progress:
 
-    ✅ Responsive design for all screen sizes
+- 🧩 Filter recipes by category
 
-    🧩 Filter recipes by type or category
+- 💬 Add comments or notes to recipes *(optional future feature)*
 
-    ✏️ Edit own recipes after creation
+- 👥 User profile page with recipe history *(optional future feature)*
 
 Stay tuned – updates coming soon!
+
+
+## Easter Egg 
+Maybe you shouldn't click to often on your profile picture if you don't like some music 😅
