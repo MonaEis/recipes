@@ -149,3 +149,13 @@
     
     box-shadow: 0 0 10px var(--c-greenlight);
 }
+
+
+.recipe_detail a{
+    color: white;
+    text-decoration: none;
+}
+
+.recipe_detail a:hover{
+    color: var(--c-green);
+}

@@ -33,7 +33,7 @@ export type Database = {
           created_at: string | null
           id: string
           name: string
-          quantity: number | null
+          quantity: string | null
           recipe_id: string
           unit: string | null
         }
@@ -42,7 +42,7 @@ export type Database = {
           created_at?: string | null
           id?: string
           name: string
-          quantity?: number | null
+          quantity?: string | null
           recipe_id?: string
           unit?: string | null
         }
@@ -51,7 +51,7 @@ export type Database = {
           created_at?: string | null
           id?: string
           name?: string
-          quantity?: number | null
+          quantity?: string | null
           recipe_id?: string
           unit?: string | null
         }
@@ -134,7 +134,7 @@ export type Database = {
           created_at: string
           description: string
           id: string
-          imageUrl: string | null
+          imageUrl: string
           instructions: string
           name: string
           rating: number | null
@@ -146,7 +146,7 @@ export type Database = {
           created_at?: string
           description: string
           id?: string
-          imageUrl?: string | null
+          imageUrl: string
           instructions: string
           name: string
           rating?: number | null
@@ -158,7 +158,7 @@ export type Database = {
           created_at?: string
           description?: string
           id?: string
-          imageUrl?: string | null
+          imageUrl?: string
           instructions?: string
           name?: string
           rating?: number | null

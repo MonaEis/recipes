@@ -21,6 +21,12 @@
     margin-bottom: 2rem;
 }
 
+.neues_rezept__ingredient_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .neues_rezept__ingredients input{
         min-width: unset;
 }
@@ -32,6 +38,27 @@
 
 .neues_rezept__ingredient input{
     flex: 1;
+}
+
+.delete_btn{
+    background-color: rgb(239, 76, 16);
+    color: var(--c-white100);
+    font-size: var(--fs-20);
+    padding: 1rem 3.3rem;
+    border-radius: 3.2rem;
+    cursor: pointer;
+    border-style: none;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 3rem;
+    align-self: center;
+}
+
+.delete_btn:hover{
+  transform: scale(1.1) rotate(3deg);
+  background-color: var(--c-white100);
+  color: rgb(239, 76, 16);
+  
+  box-shadow: 0 0 10px rgb(239, 76, 16);
 }
 
 .neues_rezept__ingredient input[name="ingredientname"]{

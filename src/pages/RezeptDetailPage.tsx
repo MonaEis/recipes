@@ -1,6 +1,6 @@
 import "../styles/rezept_detail_page.css";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import { supabase } from "../lib/supabaseClient";
 // import heartIcon from "../assets/img/heart.svg";
 import { useAuthContext } from "../context/auth-context";
@@ -11,7 +11,7 @@ type RecipeDetail = {
     description: string;
     id: string;
     user_id: string;
-    imageUrl: string | null;
+    imageUrl: string;
     instructions: string;
     name: string;
     rating: number | null;
@@ -21,7 +21,7 @@ type RecipeDetail = {
         created_at?: string | null;
         id?: string;
         name?: string;
-        quantity?: number | null;
+        quantity?: string | null;
         recipe_id?: string;
         unit?: string | null;
     }[];
@@ -65,9 +65,9 @@ const RezeptDetailPage = () => {
     // console.log(recipe[0])
     // console.log(recipe[0].ingredients)
 
-    const handleChange = () => {
-        navigate("/neuesrezept");
-    };
+    // const handleChange = () => {
+    //     navigate("/neuesrezept/${id}");
+    // };
 
     const handleDelete = () => {
         supabase
@@ -167,10 +167,12 @@ const RezeptDetailPage = () => {
                         {recipe?.user_id === session?.user?.id && (
                             <div>
                                 <button
-                                    onClick={handleChange}
+                                    // onClick={handleChange}
                                     className="green_btn"
                                 >
+                                    <Link to={`/neuesrezept/${id}`} state={{recipe_id: recipe.id}}>
                                     Ändern
+                                    </Link>
                                 </button>
                                 <button
                                     onClick={handleDelete}
