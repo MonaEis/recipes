@@ -63,6 +63,12 @@ Once authenticated, users can:
 Supabase handles session management and provides secure access via JWT tokens in the background. All interactions with the backend are scoped to the authenticated user.
 ⚠️ Auth state is preserved across sessions using Supabase’s built-in client library.
 
+
+> ⚠️ 🥄 **Please log in to enjoy the full Löffelgrün experience!** ⚠️
+> 
+> Unlock all features like saving favourites, editing your recipes, and more.
+
+
 <div align="center">
   <img src="src/assets/screenshots/iPad_Auth_1.png" width="30%" />
   <img src="src/assets/screenshots/iPad_Auth_2.png" width="30%" />
